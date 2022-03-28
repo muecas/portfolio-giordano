@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio fotográfico</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/styles.css" media="screen">
+</head>
+<body>
+    <div class="grid">
+        <header>
+            <div class="logo">
+                <a href="index.html"><img src="img/logo.svg" alt="Logo portfolio fotográfico" class="img-fluid"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="galerias.html">Galerías</a></li>
+                    <li><a href="comprar-copias.html" class="selected">Comprar copias</a></li>
+                    <li><a href="acerca-de.html">Acerda de</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="padded">
+            <section class="form">
+                <h1>Comprar copias</h1>
+                <form action="" method="post" name="formlario-de-envio" id="formulario-de-envio">
+                    <fieldset>
+                        <legend>Seleccion&aacute; las im&aacute;genes</legend>
+                        <input type="checkbox" name="imagenes[]" id="imagen-1"><label for="imagen-1" value="imagen-1">Im&aacute;gen 1</label>
+                        <input type="checkbox" name="imagenes[]" id="imagen-2"><label for="imagen-2" value="imagen-2">Im&aacute;gen 2</label>
+                        <input type="checkbox" name="imagenes[]" id="imagen-3"><label for="imagen-3" value="imagen-3">Im&aacute;gen 3</label>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Datos personales</legend>
+                        <label for="nombre">Nombre</label>
+                        <input type="text" name="nombre" id="nombre" placeholder="Ingres&aacute; tu nombre">
+                        <label for="apellido">Apellido</label>
+                        <input type="text" name="apellido" id="apellido" placeholder="Ingres&aacute; tu apellido">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" placeholder="Ingres&aacute; tu email">
+                    </fieldset>
+                    <fieldset>
+                        <legend>Envío</legend>
+                        <label for="direccion">Direcci&oacute;n</label>
+                        <input type="text" name="direccion" id="direccion" placeholder="Ingres&aacute; tu direcci&oacute;n">
+                        <label for="ciudad">Ciudad</label>
+                        <select name="ciudad" id="ciudad">
+                            <option value="">Seleccion&aacute; tu ciudad</option>
+                            <option value="montevideo">Montevideo</option>
+                        </select>
+                    </fieldset>
+                    <input type="submit" name="submit" id="submit" value="Enviar mensaje">
+                </form>
+            </section>
+        </main>
+        <footer>
+            <ul>
+                <li><a href="https://www.facebook.com" class="facebook" target="_blank">Seguime en Facebook</a></li>
+                <li><a href="https://www.intagram.com" class="instagram" target="_blank">Seguime en Instagram</a></li>
+                <li><a href="https://www.flickr.com" class="flickr" target="_blank">Seguime en Flickr</a></li>
+            </ul>
+        </footer>
+    </div>
+</body>
+</html>
