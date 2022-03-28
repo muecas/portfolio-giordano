@@ -112,17 +112,76 @@ body {
         .grid main section.gallery {
             position: relative;
             height: 70vh;
-            background: transparent url(../img/slider/1.jpg) center no-repeat;
-            background-size: cover;
         }
+
+            @keyframes image {
+                
+                0% {
+                    opacity: 0;
+                }
+                
+                50% {
+                    opacity: 1;
+                }
+                
+                100% {
+                    opacity: 0;
+                }
+                
+            }
+        
+            .grid main section.gallery div {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: transparent;
+                background-position: center;
+                background-size: 100% auto;
+                animation-name: image;
+                animation-duration: 20s;
+                animation-iteration-count: infinite;
+            }
+            
+            .grid main section.gallery div:first-of-type {
+                z-index: 2;
+                background-image: url(../img/slider/1.jpg);
+            }
+            
+            .grid main section.gallery div:last-of-type {
+                z-index: 1;
+                opacity: 0;
+                animation-delay: 10s;
+                background-image: url(../img/slider/2.jpg);
+            }
             
             .grid main section.gallery a {
+                z-index: 2;
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: block;
+                width: 100%;
+                height: 100%;
+                text-decoration: none;
+            }
+
+            .grid main section.gallery a:after {
+                content: "";
+                opacity: 0;
                 z-index: 1;
                 position: absolute;
                 display: block;
                 width: 100%;
                 height: 100%;
                 text-decoration: none;
+                background: radial-gradient(transparent, rgba(0, 0, 0, .25) 70%);
+                transition: opacity 0.25s ease;
+            }
+
+            .grid main section.gallery a:hover:after {
+                opacity: 1;
             }
 
         .grid main section.blurbs {
