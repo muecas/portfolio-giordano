@@ -1,4 +1,4 @@
-html {
+:root {
     --font-weight-light: 300;
     --font-weight-regular: 400;
     --font-weight-bold: 700;
@@ -15,6 +15,15 @@ html {
     margin: 0;
     padding: 0;
     font: var(--font-weight-light) 1rem 'Montserrat', Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+.row {
+    --bs-gutter-x: 0;
 }
 
 body {
@@ -37,61 +46,30 @@ body {
 }
 
     .grid header {
-        z-index: 2;
+        z-index: 3;
         position: sticky;
         top: 0;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
         grid-area: header;
         padding: 20px var(--h-padding) 15px;
         background-color: #000;
     }
-
-        .grid header .logo {
-            flex: 0 0 50%;
+    
+        .navbar-toggler {
+            margin-right: 0;
+            margin-left: auto;
+        }
+        
+        .navbar-nav {
+            padding-top: 1rem;
+            text-align: right;
         }
 
-        .grid header nav {
-            position: relative;
-            flex: 1 0 auto;
-            --bar-height: 5px;
+        .nav-link {
+            color: #fff;
+            font-size: 0.8rem;
+            text-decoration: none;
+            text-transform: uppercase;
         }
-
-            .grid header nav:after,
-            .grid header nav:before {
-                content: "";
-                position: absolute;
-                top: 50%;
-                right: 0;
-                width: 20%;
-                height: var(--bar-height);
-                background-color: #fff;
-                transform: translateY(calc(-50% - var(--bar-height)));
-            }
-
-            .grid header nav:after {
-                transform: translateY(calc(-50% - var(--bar-height)));
-            }
-
-            .grid header nav:before {
-                transform: translateY(calc(-50% + var(--bar-height)));
-            }
-
-            .grid header nav ul {
-                display: none;
-            }
-
-            .grid header nav ul li a {
-                color: #fff;
-                font-size: 0.8rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-                .grid header nav ul li a.selected {
-                    font-weight: var(--font-weight-bold);
-                }
 
     .grid main {
         grid-area: main;
@@ -138,7 +116,7 @@ body {
                 height: 100%;
                 background-color: transparent;
                 background-position: center;
-                background-size: 100% auto;
+                background-size: cover;
                 animation-name: image;
                 animation-duration: 20s;
                 animation-iteration-count: infinite;
@@ -185,10 +163,6 @@ body {
             }
 
         .grid main section.blurbs {
-            display: grid;
-            grid-template-columns: repeat(1, auto);
-            grid-template-rows: repeat(1, auto);
-            grid-template-areas: "col-1" "col-2" "col-3";
             background-color: #000;
         }
 
@@ -201,16 +175,7 @@ body {
                 text-align: center;
             }
 
-                .grid main section.blurbs article:first-of-type {
-                    grid-area: col-1;
-                }
-
-                .grid main section.blurbs article:nth-child(2) {
-                    grid-area: col-2;
-                }
-
                 .grid main section.blurbs article:last-of-type {
-                    grid-area: col-3;
                     border: none;
                 }
 
@@ -235,50 +200,45 @@ body {
                     height: 100%;
                     text-decoration: none;
                 }
-                
-        .grid main section.galleries {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-        }
         
-            .grid main section.galleries article {
-                overflow: hidden;
-                position: relative;
+        .grid main section.galleries article {
+            overflow: hidden;
+            position: relative;
+        }
+
+            .grid main section.galleries article img {
+                display: block;
+            }
+                
+            .grid main section.galleries article a {
+                z-index: 2;
+                position: absolute;
+                display: block;
+                width: 100%;
+                height: 100%;
+                text-decoration: none;
             }
 
-                .grid main section.galleries article img {
-                    display: block;
-                }
-                
-                .grid main section.galleries article a {
-                    z-index: 2;
-                    position: absolute;
-                    display: block;
-                    width: 100%;
-                    height: 100%;
-                    text-decoration: none;
-                }
+            .grid main section.galleries article div {
+                z-index: 1;
+                position: absolute;
+                display: block;
+                width: 100%;
+                height: 100%;
+                background: radial-gradient(rgba(0, 0, 0, .75), transparent 50%);
+            }
 
-                .grid main section.galleries article div {
+                .grid main section.galleries article div span {
                     z-index: 1;
                     position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
                     display: block;
                     width: 100%;
-                    height: 100%;
-                    background: radial-gradient(rgba(0, 0, 0, .75), transparent 50%);
+                    text-transform: uppercase;
+                    text-align: center;
+                    font-size: 0.8rem;
                 }
-
-                    .grid main section.galleries article div span {
-                        z-index: 1;
-                        position: absolute;
-                        top: 50%;
-                        transform: translateY(-50%);
-                        display: block;
-                        width: 100%;
-                        text-transform: uppercase;
-                        text-align: center;
-                        font-size: 0.8rem;
-                    }
 
         .grid main section.about {
             padding: 0 var(--h-padding) 50px;
@@ -310,53 +270,36 @@ body {
         .grid main section.form {
             padding: 0 var(--h-padding) 50px;
         }
-
-            .grid main form fieldset {
-                margin-bottom: 15px;
-                padding: 10px;
-                border: 1px solid rgb(196, 196, 196);
+        
+            .form-group {
+                margin-bottom: 1rem;
             }
             
-            .grid main form fieldset legend {
-                padding: 0 10px;
-            }
-            
-            .grid main form fieldset label,
-            .grid main form fieldset select,
-            .grid main form fieldset input:not([type="checkbox"]),
-            .grid main form fieldset textarea {
-                display: block;
-                width: 100%;
-            }
-            
-            .grid main form fieldset [type="checkbox"] + label {
+            .form-check {
                 display: inline-block;
-                width: auto;
-                padding: 0 0.5rem;
             }
             
-            .grid main form fieldset label {
-                margin-bottom: 0.25rem;
-                font-weight: var(--font-weight-regular);
-                font-size: 0.8rem;
+            .form-check-label {
+                margin-right: 1rem;
             }
-            
-            .grid main form fieldset input[type="text"],
-            .grid main form fieldset input[type="email"],
-            .grid main form fieldset select {
-                padding: 0.25rem 0.4rem;
+
+            .form-group label {
+                display: inline-block;
                 margin-bottom: 0.5rem;
-                border: 1px solid rgb(196, 196, 196);
-                border-radius: 0;
+            }
+
+            .btn-primary {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                background-color: #fff;
                 color: #000;
             }
 
-            .grid main form input[type="submit"] {
-                display: block;
-                max-width: 200px;
-                margin: 0 auto;
-                padding: 0.25rem 0.4rem;
-                border: 1px solid rgb(196, 196, 196);
+            .btn-primary:hover,
+            .btn-primary:active,
+            .btn-primary:focus {
+                background-color: #fff;
                 color: #000;
             }
 
@@ -415,56 +358,12 @@ body {
                 background-image: url(../img/icono-flickr.png);
             }
 
-@media screen and (min-width: 576px) {
-
-    .grid header .logo {
-        flex: 0 0 35%;
-    }
-
-    .grid header nav {
-        --bar-height: 6px;
-    }
-
-        .grid header nav:after,
-        .grid header nav:before {
-            position: absolute;
-            right: 0;
-            width: 15%;
-        }
-        
-}
-
 @media screen and (min-width: 768px) {
-
-    .grid header {
-        align-items: center;
-    }
     
-        .grid header .logo {
-            flex: 1 0 20%;
-            max-width: 200px;
-        }
-
-        .grid header nav:after,
-        .grid header nav:before {
-            content: none;
-        }
-
-        .grid header nav ul {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: nowrap;
-            justify-content: flex-end;
-            list-style: none;
-        }
-
-            .grid header nav ul li {
-                margin-right: 1.4rem;
-            }
-
-            .grid header nav ul li:last-of-type {
-                margin-right: 0;
-            }
+    .navbar-nav {
+        padding-top: 0;
+        text-align: left;
+    }
     
     .grid main section.gallery {
         height: 50vh;
@@ -472,8 +371,6 @@ body {
     
     .grid main section.blurbs {
         padding: 15px var(--h-padding);
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-areas: "col-1 col-2 col-3";
     }
     
         .grid main section.blurbs article {
@@ -481,21 +378,9 @@ body {
             border-right-width: 1px;
         }
     
-    .grid main section.galleries {
-        grid-template-columns: repeat(3, 1fr);
-    }
-    
 }
 
 @media screen and (min-width: 992px) {
-
-    .grid header nav ul li a {
-        transition: color 0.25s ease;
-    }
-
-        .grid header nav ul li a:not(.selected):hover {
-            color: var(--light-grey);
-        }
     
     .grid main section.gallery {
         height: 70vh;
@@ -531,15 +416,9 @@ body {
         transform: scale(1.05, 1.05);
     }
     
-    .grid main section.about,
-    .grid main section.form {
-        max-width: var(--max-content-width);
-        margin: 0 auto;
+    .grid main section.about p {
+        font-size: 0.9rem;
     }
-    
-        .grid main section.about p {
-            font-size: 0.9rem;
-        }
 
 }
 

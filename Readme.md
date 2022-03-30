@@ -2,6 +2,19 @@
 
 [https://muecas.github.io/portfolio-giordano/](https://muecas.github.io/portfolio-giordano/)
 
+## Entrega Bootstrap
+
+Componentes realizados en Bootstrap:
+
+- layout header
+- navegación
+- blurbs página inicial
+- galerías
+- formularios
+- componentes de layout generales de cada página en particular
+
+Se generó una rama `features/bootstrap` para mantener separado el proyecto original de la entrega particular. Los cambios correspondientes a la entrega pueden verse en dicha rama y en [https://muecas.github.io/portfolio-giordano/](https://muecas.github.io/portfolio-giordano/).
+
 ## Links wireframes
 
 ### Home

@@ -8,42 +8,51 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/styles.css" media="screen">
 </head>
 <body>
     <div class="grid">
-        <header>
-            <div class="logo">
+        <header class="row align-items-md-center">
+            <div class="logo col-5 col-md-3 col-lg-2">
                 <a href="index.html"><img src="img/logo.svg" alt="Logo portfolio fotográfico" class="img-fluid"></a>
             </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="galerias.html">Galerías</a></li>
-                    <li><a href="comprar-copias.html">Comprar copias</a></li>
-                    <li><a href="acerca-de.html">Acerda de</a></li>
-                    <li><a href="contacto.html" class="selected">Contacto</a></li>
-                </ul>
+            <nav class="col-7 col-md-9 col-lg-10 navbar navbar-expand-md navbar-dark">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Navegaci&ioacute;n">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-md-end" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-item nav-link" href="index.html">Home</a>
+                        <a class="nav-item nav-link" href="galerias.html">Galerías</a>
+                        <a class="nav-item nav-link" href="comprar-copias.html">Comprar copias</a>
+                        <a class="nav-item nav-link" href="acerca-de.html">Acerca de</a>
+                        <a class="nav-item nav-link active" href="contacto.html">Contacto</a>
+                    </div>
+                </div>
             </nav>
         </header>
-        <main class="padded">
-            <section class="form">
+        <main class="padded row justify-content-md-center">
+            <section class="form col-12 col-md-8 col-xl-6">
                 <h1>Contacto</h1>
                 <form action="" method="post" name="formlario-de-contacto" id="formulario-de-contacto">
-                    <fieldset>
-                        <legend>Datos personales</legend>
+                    <div class="form-group">
                         <label for="nombre">Nombre</label>
-                        <input type="text" name="nombre" id="nombre" placeholder="Ingres&aacute; tu nombre">
+                        <input type="text" name="nombre" id="nombre" class="form-control" placeholder="Ingres&aacute; tu nombre">
+                    </div>
+                    <div class="form-group">
                         <label for="apellido">Apellido</label>
-                        <input type="text" name="apellido" id="apellido" placeholder="Ingres&aacute; tu apellido">
+                        <input type="text" name="apellido" id="apellido" class="form-control" placeholder="Ingres&aacute; tu apellido">
+                    </div>
+                    <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="email" name="email" id="email" placeholder="Ingres&aacute; tu email">
-                    </fieldset>
-                    <fieldset>
-                        <legend>Mensaje</legend>
-                        <textarea name="mensaje" id="mensaje" cols="30" rows="10"></textarea>
-                    </fieldset>
-                    <input type="submit" name="submit" id="submit" value="Enviar mensaje">
+                        <input type="email" name="email" id="email" class="form-control" placeholder="Ingres&aacute; tu email">
+                    </div>
+                    <div class="form-group">
+                        <label>Mensaje</label>
+                        <textarea name="mensaje" id="mensaje" class="form-control"></textarea>
+                    </div>
+                    <button type="submit" name="submit" id="submit" class="btn btn-primary">Enviar mensaje</button>
                 </form>
             </section>
         </main>
@@ -55,5 +64,8 @@
             </ul>
         </footer>
     </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>
