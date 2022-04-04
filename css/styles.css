@@ -57,7 +57,23 @@ body {
         .navbar-toggler {
             margin-right: 0;
             margin-left: auto;
+            padding: 0;
+            border: none;
         }
+
+            .navbar-toggler span {
+                transition: transform 0.25s ease
+            }
+    
+            .navbar-toggler:focus-visible,
+            .navbar-toggler:focus {
+                box-shadow: none;
+            }
+
+                .navbar-toggler[aria-expanded="true"] span,
+                .navbar-toggler[aria-expanded="true"] span {
+                    transform: rotate(90deg);
+                }
         
         .navbar-nav {
             padding-top: 1rem;
@@ -237,7 +253,7 @@ body {
                     width: 100%;
                     text-transform: uppercase;
                     text-align: center;
-                    font-size: 0.8rem;
+                    font-size: 1.2rem;
                 }
 
         .grid main section.about {
@@ -292,8 +308,9 @@ body {
                 display: block;
                 margin-left: auto;
                 margin-right: auto;
-                background-color: #fff;
-                color: #000;
+                background-color: var(--dark-grey);
+                border: none;
+                color: #fff;
             }
 
             .btn-primary:hover,
