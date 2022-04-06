@@ -1,0 +1,58 @@
+.grid footer {
+	grid-area: footer;
+	padding: 25px var(--h-padding);
+	background-color: var(--dark-grey);
+	
+	ul {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: center;
+		list-style: none;
+		font-size: 0;
+		text-align: center;
+		
+		li {
+			flex: 0 0 auto;
+			margin-right: 10px;
+			
+			&:last-child {
+				margin-right: 0;
+			}
+			
+			a {
+				overflow: hidden;
+				display: block;
+				opacity: 0.7;
+				width: 32px;
+				height: 32px;
+				transition: opacity 0.25s ease;
+				text-indent: -9999px;
+				text-decoration: none;
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: 100% 100%;
+				
+				&:hover {
+					opacity: 1;
+				}
+				
+				&.facebook {
+					background-image: url(../img/icono-facebook.png);
+				}
+				
+				&.instagram {
+					background-image: url(../img/icono-instagram.png);
+				}
+				
+				&.flickr {
+					background-image: url(../img/icono-flickr.png);
+				}
+				
+			}
+			
+		}
+		
+	}
+	
+}

@@ -1,0 +1,21 @@
+$font-weight-light   : 300;
+$font-weight-regular : 400;
+$font-weight-bold    : 700;
+$bg-color            : rgb(20, 20, 20);
+$dark-grey           : rgb(25, 25, 25);
+$light-grey          : rgb(99, 99, 99);
+$h-padding           : 5%;
+$max-width           : 1440px;
+$max-content-width   : 700px;
+
+:root {
+	--font-weight-light: #{$font-weight-light};
+	--font-weight-regular: #{$font-weight-regular};
+	--font-weight-bold: #{$font-weight-bold};
+	--bg-color: #{$bg-color};
+	--dark-grey: #{$dark-grey};
+	--light-grey: #{$light-grey};
+	--h-padding: #{$h-padding};
+	--max-width: #{$max-width};
+	--max-content-width: #{$max-content-width};
+}

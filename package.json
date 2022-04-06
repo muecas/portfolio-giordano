@@ -1,0 +1,29 @@
+{
+  "name": "portfolio-coder-house",
+  "version": "1.0.0",
+  "description": "[https://muecas.github.io/portfolio-giordano/](https://muecas.github.io/portfolio-giordano/)",
+  "main": "index.js",
+  "scripts": {
+    "test": "grunt",
+    "postinstall": "grunt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/muecas/portfolio-giordano.git"
+  },
+  "author": "Luciano Giordano",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/muecas/portfolio-giordano/issues"
+  },
+  "homepage": "https://github.com/muecas/portfolio-giordano#readme",
+  "devDependencies": {
+    "autoprefixer": "^9.7.3",
+    "grunt": "^1.4.1",
+    "grunt-cli": "^1.4.3",
+    "grunt-postcss": "^0.9.0",
+    "grunt-sass": "^3.1.0",
+    "load-grunt-tasks": "^5.1.0",
+    "node-sass": "^7.0.1"
+  }
+}

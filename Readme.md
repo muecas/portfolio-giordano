@@ -2,14 +2,16 @@
 
 [https://muecas.github.io/portfolio-giordano/](https://muecas.github.io/portfolio-giordano/)
 
-## Segunda entrega proyecto final
+## Desafío
 
-Componentes realizados en Bootstrap:
+Cambios realizados
 
-- ajustes estilos relacionados a Bootstrap y sus componentes
-- agregado galerías de imágenes utilizando Fancybox
+- inicialización de npm para el proyecto
+- instalación de módulos correspondientes (elección de Grunt para compilación de lo sarchivos scss)
+- implementación de hoja de estilos a través de SASS
+- implementación de `@import`, `@mixin`, `@extend`, `@include`, nesting y variables
 
-Se generó una rama `features/bootstrap` para mantener separado el proyecto original de la entrega particular. Los cambios correspondientes a la entrega pueden verse en dicha rama y en [https://muecas.github.io/portfolio-giordano/](https://muecas.github.io/portfolio-giordano/).
+Se generó una rama `features/sass` para mantener separado el proyecto original de la entrega particular. Los cambios correspondientes a la entrega pueden verse en dicha rama y en [https://muecas.github.io/portfolio-giordano/](https://muecas.github.io/portfolio-giordano/).
 
 ## Links wireframes
 
