@@ -1,7 +1,10 @@
 .grid header {
+	@extend %absolute-block-full-w-and-height;
 	z-index: 3;
 	position: sticky;
+	display: flex;
 	top: 0;
+	height: unset;
 	grid-area: header;
 	padding: 20px var(--h-padding) 15px;
 	background-color: #000;

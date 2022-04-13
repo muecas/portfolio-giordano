@@ -6,12 +6,8 @@
 
 Cambios realizados
 
-- inicialización de npm para el proyecto
-- instalación de módulos correspondientes (elección de Grunt para compilación de lo sarchivos scss)
-- implementación de hoja de estilos a través de SASS
-- implementación de `@import`, `@mixin`, `@extend`, `@include`, nesting y variables
-
-Se generó una rama `features/sass` para mantener separado el proyecto original de la entrega particular. Los cambios correspondientes a la entrega pueden verse en dicha rama y en [https://muecas.github.io/portfolio-giordano/](https://muecas.github.io/portfolio-giordano/).
+- implementación de `map-get()` (`@import`, `@mixin`, `@extend`, `@include`, nesting y variables habían sido implementados en la entrega anterior)
+- implementación de `@extend` y sobreescritura de sus propiedades
 
 ## Links wireframes
 

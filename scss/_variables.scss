@@ -1,20 +1,22 @@
 $font-weight-light   : 300;
 $font-weight-regular : 400;
 $font-weight-bold    : 700;
+$font-weights        : ('light' : $font-weight-light, 'regular' : $font-weight-regular, 'bold' : $font-weight-bold);
 $bg-color            : rgb(20, 20, 20);
 $dark-grey           : rgb(25, 25, 25);
 $light-grey          : rgb(99, 99, 99);
+$colors              : ('bg-color' : $bg-color, 'dark-grey' : $dark-grey, 'light-grey' : $light-grey);
 $h-padding           : 5%;
 $max-width           : 1440px;
 $max-content-width   : 700px;
 
 :root {
-	--font-weight-light: #{$font-weight-light};
-	--font-weight-regular: #{$font-weight-regular};
-	--font-weight-bold: #{$font-weight-bold};
-	--bg-color: #{$bg-color};
-	--dark-grey: #{$dark-grey};
-	--light-grey: #{$light-grey};
+	--font-weight-light: #{map-get($font-weights, 'light')};
+	--font-weight-regular: #{map-get($font-weights, 'regular')};
+	--font-weight-bold: #{map-get($font-weights, 'bold')};
+	--bg-color: #{map-get($colors, 'bg-color')};
+	--dark-grey: #{map-get($colors, 'dark-grey')};
+	--light-grey: #{map-get($colors, 'light-grey')};
 	--h-padding: #{$h-padding};
 	--max-width: #{$max-width};
 	--max-content-width: #{$max-content-width};
