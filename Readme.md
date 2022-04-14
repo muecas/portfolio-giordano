@@ -6,6 +6,11 @@
 
 Cambios realizados
 
+- cambios a nivel de título html
+- agregado de meta description
+- agregado de meta keywords
+- Cambios en textos genéricos
+- cambios en títulos de páginas (a nivel headings como `h1`)
 - implementación de `map-get()` (`@import`, `@mixin`, `@extend`, `@include`, nesting y variables habían sido implementados en la entrega anterior)
 - implementación de `@extend` y sobreescritura de sus propiedades
 
