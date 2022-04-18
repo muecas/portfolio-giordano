@@ -15,6 +15,8 @@ Cambios realizados
 - cambios en títulos de páginas (a nivel headings como `h1`)
 - implementación de `map-get()` (`@import`, `@mixin`, `@extend`, `@include`, nesting y variables habían sido implementados en la entrega anterior)
 - implementación de `@extend` y sobreescritura de sus propiedades
+- agregado dependencia npm nodemon
+- agregado script de build y watch basados en nodemon
 
 ## Links wireframes
 
